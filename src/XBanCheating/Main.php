@@ -15,9 +15,13 @@ public function onEnable(){
 }
  public function playerBlockTouch(PlayerInteractEvent $event){
  if($event->getPlayer()->getGamemode()==1){
- if($event->getBlock()->getID() == 154 || $event->getBlock()->getID() == 118 || $event->getBlock()->getID() == 199 || $event->getBlock()->getID() == 58){
+ if($event->getBlock()->getID() == 154 || $event->getBlock()->getID() == 118 || $event->getBlock()->getID() == 199){
  $event->setCancelled(true);
  $event->getPlayer()->sendMessage("§b［XBanCheating］§e创造模式§c禁止使用此物品！");
+ if($event->getPlayer()->getGamemode()==1){
+ if($event->getBlock()->getID() == 58)}
+ $sender->getPlayer()->setgamemode("0");
+ $event->getPlayer()->sendMessage("§b［XBanCheating］§e创造模式§c禁止使用此物品，已切换生存！");
  	}
  	}
      }
